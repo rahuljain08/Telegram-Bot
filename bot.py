@@ -80,7 +80,7 @@ def error(bot, update):
 bot = Bot(TOKEN)
 
 try:
-	bot.set_webhook(os.environ.get(WEBHOOK_URL) + TOKEN)
+	bot.set_webhook(os.environ.get("WEBHOOK_URL") + TOKEN)
 except Exception as e:
 	print(e)
 
@@ -96,4 +96,4 @@ dp.add_error_handler(error)
 
 if __name__=='__main__':
 
-	app.run(port = os.environ.get(PORT, 3333));
+	app.run(port = os.environ.get("PORT", 3333));
